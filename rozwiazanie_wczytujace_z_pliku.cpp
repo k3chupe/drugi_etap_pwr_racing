@@ -39,7 +39,7 @@ Punkt policz_srodek(const vector<Punkt>& punkty){
 	return srodek;
 }
 
-// oblicza odległosc z wzoru pitagorasa
+// oblicza odległosc ze wzoru pitagorasa
 long double kwadrat_odlegosc(const Punkt pierwszy, const Punkt drugi){
 	return (pierwszy.x - drugi.x)*(pierwszy.x - drugi.x)+
 		   (pierwszy.y - drugi.y)*(pierwszy.y - drugi.y);
@@ -61,7 +61,7 @@ Punkt znajdz_najdalszy_od_srodka(const vector<Punkt>& punkty, const Punkt& srode
 	return punkty[index_najdalszego_punktu];
 }
 
-// poruwnuje odlegloszci dwuch punktow wzgledem poczatku i zwraca true kiedy pierwszy punkt jest blizej
+// porownuje odlegloszci dwoch punktow wzgledem poczatku i zwraca true kiedy pierwszy punkt jest blizej
 bool blizszy_punkt(const Punkt startowy, const Punkt pierwszy, const Punkt drugi){
 	if (kwadrat_odlegosc(startowy,pierwszy)<
 		kwadrat_odlegosc(startowy,drugi)){
@@ -116,7 +116,7 @@ vector <Punkt> znajdz_zewnetrzne_elementy(const vector<Punkt>& punkty, const Pun
 	return odpowiedz;
 }
 
-// wypisawanie w taki sposub jak zadanie oczekuje a dla latwiejszego testowane mozna posortowac by wyniki były jednakowe
+// wypisawanie w taki sposob jak zadanie oczekuje a dla latwiejszego testowane mozna posortowac by wyniki były jednakowe
 void wypisz(vector <Punkt> punkty){
 	#ifdef SORTOWANIE
 		sort(punkty.begin(),punkty.end());
